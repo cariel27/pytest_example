@@ -3,6 +3,7 @@ from pytest import Item
 import ast
 from lib import framework_helper as fr
 from lib import util
+from lib import config_reader
 
 # ======================================================================================================================
 
@@ -177,9 +178,7 @@ def print_report():
 
 @pytest.fixture(scope="module")
 def setup_test_execution(request):
-    from lib import util
     import platform
-    from lib import config_reader
 
     # Now the default environment is REDMINE
     pytest_init_path = "pytest_tests/pytest.ini"
@@ -253,8 +252,6 @@ def get_web_driver(config_iterator):
 
 
 def get_browser_list():
-    from lib import config_reader
-
     pytest_config = config_reader.read_config_file(PYTEST_INI_PATH)
     browser_list = pytest_config["pytest"]["browser_config_list"].replace(" ", "").split(",")
 

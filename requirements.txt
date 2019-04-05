@@ -1,2 +1,5 @@
 pytest==4.4.0
 allure-pytest==2.6.1
+arrow
+retry
+selenium
