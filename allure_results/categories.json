@@ -1,0 +1,37 @@
+[
+  {
+    "name": "NotImplementedYet",
+    "messageRegex": ".*NotImplementedYet.*",
+    "matchedStatuses": [
+      "skipped"
+    ]
+  },
+  {
+    "name": "Broken",
+    "messageRegex": ".*Broken.*",
+    "matchedStatuses": [
+      "skipped"
+    ]
+  },
+  {
+    "name": "Out of Scope",
+    "messageRegex": ".*OutOfScope.*",
+    "matchedStatuses": [
+      "skipped"
+    ]
+  },
+  {
+    "name": "Wrong use of Marks",
+    "messageRegex": "(.*Test contains two or more Process Marks.*|.*Test not marked with any Process Marks.*|.*Mark not recognized.*)",
+    "matchedStatuses": [
+      "skipped"
+    ]
+  },
+  {
+    "name": "Failed",
+    "matchedStatuses": [
+      "broken", "failed"
+    ]
+  }
+
+]

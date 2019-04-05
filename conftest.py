@@ -9,7 +9,7 @@ from lib import config_reader
 
 # CUSTOM REPORTER
 tests_list = []
-PYTEST_INI_PATH = "pytest_tests/pytest.ini"
+PYTEST_INI_PATH = "pytest.ini"
 MARKERS_TO_RUN = ("Working",)
 MARKERS_TO_SKIP = ("NotImplementedYet", "Broken", "OutOfScope")
 MARKERS_PROCESS_TAG = []
