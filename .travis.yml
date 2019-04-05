@@ -3,9 +3,9 @@ python:
   - "3.6"
 
 install:
-  - pip install -r cariel27/pytest_example/requirements.txt
+  - git clone --depth=50 --branch=master https://github.com/cariel27/pytest_example.git
+  - pip install -r pytest_example/requirements.txt
+  - npm install -g allure-commandline
 
 script:
-  - pwd
-  - ls
-  - python -m pytest -q cariel27/pytest_example/tests/test_report.py
+  - python -m pytest -q pytest_example/tests/test_report.py
