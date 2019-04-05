@@ -6,4 +6,5 @@ install:
   - pip install -r cariel27/pytest_example/requirements.txt
 
 script:
+  - pwd
   - python -m pytest -q cariel27/pytest_example/tests/test_report.py
