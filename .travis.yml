@@ -3,7 +3,7 @@ python:
   - "3.6"
 
 install:
-  - pip install -r pytest_example/requirements.txt
+  - pip install -r cariel27/pytest_example/requirements.txt
 
 script:
-  - python -m pytest -q tests/test_report.py
+  - python -m pytest -q cariel27/pytest_example/tests/test_report.py
