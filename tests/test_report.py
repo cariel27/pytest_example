@@ -8,9 +8,9 @@ class TestClass(object):
     def test_mark_function_by_process_tag_working_that_pass(self):
         assert True
 
-    @pytest.mark.test_process_marks("Working")
-    def test_mark_function_by_process_tag_working_tha_fails(self):
-        assert False
+    # @pytest.mark.test_process_marks("Working")
+    # def test_mark_function_by_process_tag_working_tha_fails(self):
+    #     assert False
 
     # <<<<<< Process Marks - Parametrized Tests >>>>>>>>>>
     test_data_working = [(1, 1, 2), (2, 2, 4)]
@@ -22,15 +22,15 @@ class TestClass(object):
     def test_mark_function_by_process_tag_working_parametrized_working(self, a, b, expected):
         assert a+b == expected
 
-    @pytest.mark.parametrize("a,b,expected", test_data_not_implemented_yet)
-    @pytest.mark.test_process_marks("NotImplementedYet")
-    def test_mark_function_by_process_tag_working_parametrized_not_implemented(self, a, b, expected):
-        assert a + b == expected
+    # @pytest.mark.parametrize("a,b,expected", test_data_not_implemented_yet)
+    # @pytest.mark.test_process_marks("NotImplementedYet")
+    # def test_mark_function_by_process_tag_working_parametrized_not_implemented(self, a, b, expected):
+    #     assert a + b == expected
 
-    @pytest.mark.parametrize("a,b,expected", test_data_broken)
-    @pytest.mark.test_process_marks("Broken")
-    def test_mark_function_by_process_tag_working_parametrized_broken(self, a, b, expected):
-        assert a + b == expected
+    # @pytest.mark.parametrize("a,b,expected", test_data_broken)
+    # @pytest.mark.test_process_marks("Broken")
+    # def test_mark_function_by_process_tag_working_parametrized_broken(self, a, b, expected):
+    #     assert a + b == expected
 
     # <<<<<< Process Marks >>>>>>>>>>
     @pytest.mark.test_process_marks("US20589")
@@ -90,12 +90,12 @@ class TestClass(object):
         x = "hello"
         assert hasattr(x, 'check')
 
-    @pytest.mark.Broken
-    def test_broken(self):
-        x = "broken"
-        assert hasattr(x, 'working')
-
-    @pytest.mark.NotImplementedYet
-    def test_not_implemented_yet(self):
-        x = "not_implemented_yet test"
-        assert hasattr(x, 'working')
+    # @pytest.mark.Broken
+    # def test_broken(self):
+    #     x = "broken"
+    #     assert hasattr(x, 'working')
+    #
+    # @pytest.mark.NotImplementedYet
+    # def test_not_implemented_yet(self):
+    #     x = "not_implemented_yet test"
+    #     assert hasattr(x, 'working')
