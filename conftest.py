@@ -132,9 +132,15 @@ def pytest_runtest_setup(item: Item):
     process_test_marks(test_item=test_item, item_id=item_id)
 
 
+    import allure
+    screenshot_name = "Python image"
+    screenshot_path = "/Users/cibanez/development/pytest_example/imgs/python.png"
+    allure.attach.file(source=screenshot_path,
+                           name=screenshot_name, attachment_type=allure.attachment_type.PNG)
+
+
 def pytest_sessionfinish(session, exitstatus):
     print_report()
-
 
 def print_report():
     print('')
@@ -309,8 +315,23 @@ def close_driver():
 
 def attach_files():
     import allure
-    if pytest.execution_data["test_attachment"].get("screenshot_path", False):
-        screenshot_name = pytest.execution_data["test_attachment"]["screenshot_file_name"]
-        allure.attach.file(source=pytest.execution_data["project_root"] + "/" +
-                                  pytest.execution_data["test_attachment"]["screenshot_path"],
+    screenshot_path = None
+
+    if pytest.execution_data["scenario_status"] == "passed":
+        screenshot_name = "Passed Test"
+        screenshot_path = "/Users/cibanez/development/pytest_example/imgs/passed.jpg"
+    elif pytest.execution_data["scenario_status"] == "skipped":
+        screenshot_name = "Skipped Test"
+        screenshot_path = "/Users/cibanez/development/pytest_example/imgs/skipped.jpg"
+    elif pytest.execution_data["scenario_status"] == "failed":
+        screenshot_name = "Failed Test"
+        screenshot_path = "/Users/cibanez/development/pytest_example/imgs/failed.jpg"
+    else:
+        screenshot_name = "Python image"
+        screenshot_path = "/Users/cibanez/development/pytest_example/imgs/python.jpg"
+        allure.attach.file(source=pytest.execution_data["project_root"] + "/" + screenshot_path,
                            name=screenshot_name, attachment_type=allure.attachment_type.PNG)
+
+
+
+
