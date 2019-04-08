@@ -3,15 +3,14 @@ python:
   - "3.6"
 
 install:
-  - git clone --depth=50 --branch=master https://github.com/cariel27/pytest_example.git
-  - git clone --depth=50 --branch=master https://github.com/cariel27/allure_results.git
-  - pip install -r pytest_example/requirements.txt
   - npm install -g allure-commandline
+  - git clone --depth=50 --branch=master https://github.com/cariel27/allure_results.git /home/travis/build/cariel27/allure_results
+  - pip install -r requirements.txt
 
 script:
-  - python -m pytest -q pytest_example/tests/test_report.py
-  - cp pytest_example/allure_results allure_results/results
-  - cd allure_results
+  - python -m pytest --alluredir=allure_results -q tests/test_report.py
+  - pwd
+  - cp allure_results /home/travis/build/cariel27/allure_results/results
   - git add .
   - git commit -m "updating allure results"
-  - git push
+  - git push origin master
