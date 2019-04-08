@@ -1,5 +1,11 @@
 [
   {
+    "name": "Failed",
+    "matchedStatuses": [
+      "failed"
+    ]
+  },
+  {
     "name": "NotImplementedYet",
     "messageRegex": ".*NotImplementedYet.*",
     "matchedStatuses": [
@@ -26,12 +32,5 @@
     "matchedStatuses": [
       "skipped"
     ]
-  },
-  {
-    "name": "Failed",
-    "matchedStatuses": [
-      "broken", "failed"
-    ]
   }
-
 ]
