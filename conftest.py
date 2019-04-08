@@ -134,7 +134,7 @@ def pytest_runtest_setup(item: Item):
 
     import allure
     screenshot_name = "Python image"
-    screenshot_path = "/Users/cibanez/development/pytest_example/imgs/python.png"
+    screenshot_path = util.get_project_root_path() + "/imgs/python.png"
     allure.attach.file(source=screenshot_path,
                            name=screenshot_name, attachment_type=allure.attachment_type.PNG)
 
