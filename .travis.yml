@@ -1,13 +1,10 @@
 language: python
   python:
     - "3.6"
-
   before_install:
     - git clone --depth=50 --branch=master https://github.com/cariel27/allure_results.git /home/travis/build/cariel27/allure_results
-
   install:
     - npm i -g npm
     - npm install -g allure-commandline
-
   script:
     - pip install -r requirements.txt && python -m pytest --alluredir=allure_results -q tests/test_report.py && ./travis_script/update_allure_results.sh
