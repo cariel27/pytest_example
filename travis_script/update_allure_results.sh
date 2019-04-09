@@ -4,7 +4,7 @@ ALLURE_RESULTS_REPO=/home/travis/build/cariel27/allure_results/results
 
 
 cp -r "$TAS_ALLURE_RESULTS_PATH"/* "$ALLURE_RESULTS_REPO"
-cd "$ALLURE_RESULTS_REPO"/results
+cd "$ALLURE_RESULTS_REPO"
 git pull
 git add .
 git commit -m "updating allure results"
