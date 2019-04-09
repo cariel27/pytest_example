@@ -11,4 +11,5 @@ install:
 - npm install -g allure-commandline
 
 script:
-- pip install -r requirements.txt && python -m pytest --alluredir=allure_results -q tests/test_report.py && ./travis_script/update_allure_results.sh
+- pip install -r requirements.txt && python -m pytest --alluredir=allure_results -q tests/test_report.py
+- ./travis_script/update_allure_results.sh
