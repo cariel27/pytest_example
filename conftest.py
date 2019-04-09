@@ -131,12 +131,11 @@ def pytest_runtest_setup(item: Item):
 
     process_test_marks(test_item=test_item, item_id=item_id)
 
-
-    import allure
-    screenshot_name = "Python image"
-    screenshot_path = util.get_project_root_path() + "/imgs/python.png"
-    allure.attach.file(source=screenshot_path,
-                           name=screenshot_name, attachment_type=allure.attachment_type.PNG)
+    # import allure
+    # screenshot_name = "Python image"
+    # screenshot_path = util.get_project_root_path() + "/imgs/python.png"
+    # allure.attach.file(source=screenshot_path,
+    #                        name=screenshot_name, attachment_type=allure.attachment_type.PNG)
 
 
 def pytest_sessionfinish(session, exitstatus):
