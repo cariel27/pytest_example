@@ -2,39 +2,42 @@ import pytest
 
 
 class TestClass(object):
-
-    @pytest.mark.test_process_marks("Working")
-    def test_mark_function_by_process_tag_working_that_pass(self):
-        assert True
-
+    # @pytest.mark.test_process_marks("Working")
+    # def test_mark_function_by_process_tag_working_that_pass(self):
+    #     assert True
+    #
     # @pytest.mark.test_process_marks("Working")
     # def test_mark_function_by_process_tag_working_that_fails(self):
     #     assert False
-
-    @pytest.mark.test_process_marks("Working")
-    def test_mark_function_by_process_tag_working_that_fixed(self):
-        assert True
-
+    #
+    # @pytest.mark.test_process_marks("Working")
+    # def test_mark_function_by_process_tag_working_that_fixed(self):
+    #     assert True
+    #
     # <<<<<< Process Marks - Parametrized Tests >>>>>>>>>>
-    test_data_working = [(1, 1, 2), (2, 2, 4)]
-    test_data_broken = [(5, 5, 10), (6, 2, 8), (4, 4, 8)]
-    test_data_not_implemented_yet = [(1, 1, 0), (2, 2, 0), (3, 3, 0), (4, 4, 0), (5, 5, 0), (6, 6, 0)]
+    # test_data_working = [(1, 1, 2), (2, 2, 4)]
+    # test_data_broken = [(5, 5, 10), (6, 2, 8), (4, 4, 8)]
+    test_data_not_implemented_yet = [(1, 1, 0), (2, 2, 0), (3, 3, 0), (4, 4, 0), (5, 5, 0), (6, 6, 0), (7, 7, 0),
+                                     (8, 8, 0), (9, 9, 0), (10, 10, 0), (11, 11, 0), (12, 12, 0), (13, 13, 0),
+                                     (14, 14, 0), (15, 15, 0), (16, 16, 0), (17, 17, 0), (18, 18, 0), (19, 19, 0),
+                                     (20, 20, 0)]
 
-    @pytest.mark.parametrize("a,b,expected", test_data_working)
-    @pytest.mark.test_process_marks("Working")
-    def test_mark_function_by_process_tag_working_parametrized_working(self, a, b, expected):
-        assert a + b == expected
+    #
+    # @pytest.mark.parametrize("a,b,expected", test_data_working)
+    # @pytest.mark.test_process_marks("Working")
+    # def test_mark_function_by_process_tag_working_parametrized_working(self, a, b, expected):
+    #     assert a + b == expected
 
     @pytest.mark.parametrize("a,b,expected", test_data_not_implemented_yet)
     @pytest.mark.test_process_marks("NotImplementedYet")
     def test_mark_function_by_process_tag_working_parametrized_not_implemented(self, a, b, expected):
         assert a + b == expected
 
-    @pytest.mark.parametrize("a,b,expected", test_data_broken)
-    @pytest.mark.test_process_marks("Working")
-    def test_mark_function_by_process_tag_working_parametrized_broken(self, a, b, expected):
-        assert a + b == expected
-
+    # @pytest.mark.parametrize("a,b,expected", test_data_broken)
+    # @pytest.mark.test_process_marks("Working")
+    # def test_mark_function_by_process_tag_working_parametrized_broken(self, a, b, expected):
+    #     assert a + b == expected
+    #
     # # <<<<<< Process Marks >>>>>>>>>>
     # @pytest.mark.test_process_marks("US20589")
     # def test_mark_function_by_process_tag_working(self):
