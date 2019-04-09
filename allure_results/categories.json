@@ -6,21 +6,21 @@
     ]
   },
   {
-    "name": "NotImplementedYet",
+    "name": "test_process_marks(\"NotImplementedYet\")",
     "messageRegex": ".*NotImplementedYet.*",
     "matchedStatuses": [
       "skipped"
     ]
   },
   {
-    "name": "Broken",
+    "name": "test_process_marks(\"Broken\")",
     "messageRegex": ".*Broken.*",
     "matchedStatuses": [
       "skipped"
     ]
   },
   {
-    "name": "Out of Scope",
+    "name": "test_process_marks(\"OutOfScope\")",
     "messageRegex": ".*OutOfScope.*",
     "matchedStatuses": [
       "skipped"
