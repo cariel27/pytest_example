@@ -2,7 +2,7 @@
   {
     "name": "Failed",
     "matchedStatuses": [
-      "failed"
+      "failed", "broken"
     ]
   },
   {
