@@ -10,3 +10,4 @@ install:
 script:
 - pip install -r requirements.txt && python -m pytest --alluredir=allure_results -q tests/test_report.py
 - ./travis_script/update_allure_results.sh
+- ./travis_script/travis_build_number.sh
