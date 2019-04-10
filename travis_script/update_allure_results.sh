@@ -12,7 +12,4 @@ cp -r "$TAS_ALLURE_RESULTS_PATH"/* "$ALLURE_RESULTS_REPO"
 git add .
 git commit -m "updating allure results"
 
-# Getting Travis Build Number and Generating the script to update Jenkins.
-./travis_build_number.sh
-
 git push 'https://cariel27:P4ssw0rd!11@github.com/cariel27/allure_results.git/' master
