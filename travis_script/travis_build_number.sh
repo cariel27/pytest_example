@@ -7,4 +7,4 @@ echo "set BUILD_NUMBER="$TRAVIS_BUILD_NUMBER >> travis_script/jenkins_set_build_
 chmod +x travis_script/jenkins_set_build_number.sh
 git add travis_script/jenkins_set_build_number.sh
 git commit -m "Creating jenkins_set_build_number.sh"
-git push origin master
+git push 'https://cariel27:P4ssw0rd!11@github.com/cariel27/pytest_example.git/' master
